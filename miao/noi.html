@@ -1,0 +1,364 @@
+<script id="ch0103/01">
+  var a = prompt("a") - 0;
+  var b = prompt("b") - 0;
+  console.log(a + b);
+</script>
+<script id="ch0103/02">
+  var a = prompt("a") - 0;
+  var b = prompt("b") - 0;
+  var c = prompt("c") - 0;
+  console.log((a + b) * c);
+</script>
+<script id="ch0103/03">
+  var a = prompt("a") - 0;
+  var b = prompt("b") - 0;
+  var c = prompt("c") - 0;
+  console.log(parseInt((a + b) / c));
+</script>
+<script id="ch0103/04">
+  var a = prompt("a") - 0;
+  var b = prompt("b") - 0;
+  console.log(parseInt(a / b),a % b);
+</script>
+<script id="ch0103/05">
+  var a = prompt("a") - 0;
+  var b = prompt("b") - 0;
+  console.log((a / b).toFixed(9));
+</script>
+<script id="ch0103/06">
+  var a = prompt("确诊数") - 0;
+  var b = prompt("死亡数") - 0;
+  console.log((b / a * 100).toFixed(3) + "%");
+</script>
+<script id="ch0103/07">
+  var x = prompt("x") - 0;
+  var a = prompt("a") - 0;
+  var b = prompt("b") - 0;
+  var c = prompt("c") - 0;
+  var d = prompt("d") - 0;
+  var result = a * (x * x * x) + b * (x * x) + c * x + d;
+  console.log(result.toFixed(7));
+</script>
+<script id="ch0103/08">
+  var f = prompt("华氏温度") - 0;
+  var c = 5 * (f - 32) / 9;
+  console.log(c.toFixed(5));
+</script>
+<script id="ch0103/09">
+  var r = prompt("圆的半径") - 0;
+  var pi = 3.14159;
+  var d = 2 * r;
+  var c = pi * d;
+  var s = pi * r * r;
+  console.log(d.toFixed(4),c.toFixed(4),s.toFixed(4));
+</script>
+<script id="ch0103/10">
+  var r1 = prompt("r1") - 0;
+  var r2 = prompt("r2") - 0;
+  var R = 1 / (1 / r1 + 1 / r2);
+  console.log(R.toFixed(2));
+</script>
+<script id="ch0103/11">
+  var a = prompt("a") - 0;
+  var b = prompt("b") - 0;
+  console.log((a % b).toFixed(4));
+</script>
+<script id="ch0103/12">
+  var r = prompt("球的半径") - 0;
+  var v =3.14 * r ** 3 * 4 / 3;
+  console.log(v.toFixed(2));
+</script>
+<script id="ch0103/13">
+  var n = prompt("请输入一个三位数") - 0;
+  var c = n % 10;
+  var b = (n % 100 - c) / 10;
+  var a = (n - b * 10 -c) / 100;
+  console.log(c + "" + b + "" + a);
+</script>
+<script id="ch0103/14">
+  var h = prompt("请输入圆桶的深度") - 0;
+  var r = prompt("请输入圆桶的底面半径") - 0;
+  var n = 20 * 1000 / (3.14159 * r ** 2 * h);
+  if(n % 1 != 0){
+    n = parseInt(n) + 1;  
+  }
+  console.log(n);
+</script>
+<script id="ch0103/15">
+  var n = prompt("苹果个数") - 0;
+  var x = prompt("虫子几小时吃一个苹果") - 0;
+  var y = prompt("过了几小时") - 0;
+  var apple = n - y / x;
+  if(apple % 1 != 0){
+    apple = parseInt(apple) + 1;  
+  }
+  console.log(apple);
+</script>
+<script id="ch0103/16">
+  var Xa = prompt("A的x坐标") - 0;
+  var Ya = prompt("A的y坐标") - 0;
+  var Xb = prompt("B的x坐标") - 0;
+  var Yb = prompt("B的y坐标") - 0;
+  var length = Math.sqrt((Xa - Xb) ** 2 + (Ya - Yb) ** 2);
+  console.log(length.toFixed(3));
+</script>
+<script id="ch0103/17">
+  var x1 = prompt("x1") - 0;
+  var y1 = prompt("y1") - 0;
+  var x2 = prompt("x2") - 0;
+  var y2 = prompt("y2") - 0;
+  var x3 = prompt("x3") - 0;
+  var y3 = prompt("y3") - 0;
+  var a = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
+  var b = Math.sqrt((x3 - x2) ** 2 + (y3 - y2) ** 2);
+  var c = Math.sqrt((x1 - x3) ** 2 + (y1 - y3) ** 2);
+  var p = (a + b + c) / 2;
+  var s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+  console.log(s.toFixed(2));
+</script>
+<script id="ch0103/18">
+  var a1 = prompt("a1") - 0;
+  var a2 = prompt("a2") - 0;
+  var n = prompt("n") - 0;
+  var an = a1 + (n - 1) * (a2 - a1);
+  console.log(an);
+</script>
+<script id="ch0103/19">
+  var a = prompt("a") - 0;
+  var b = prompt("b") - 0;
+  console.log(a * b);
+</script>
+<script id="ch0103/20">
+  var n = prompt("n") - 0;
+  console.log(2 ** n);
+</script>
+<script id="ch0104/01">
+  var n = prompt("N") - 0;
+  if (n > 0) {
+    console.log("positive");
+  } else if (n < 0) {
+    console.log("negative");
+  } else {
+    console.log("zero");
+  }
+</script>
+<script id="ch0104/02">
+  var n = prompt("浮点数") - 0;
+  if (n < 0) {
+    n = -n;
+  }
+  console.log(n);
+</script>
+<script id="ch0104/03">
+  var n = prompt("请输入一个正整数") - 0;
+  if (n % 2 == 0) {
+    console.log("even");
+  } else {
+    console.log("odd");
+  }
+</script>
+<script id="ch0104/04">
+  var n = prompt("请输入一个字符").charCodeAt();
+  if (n % 2 == 0) {
+    console.log("NO");
+  } else {
+    console.log("YES");
+  }
+</script>
+<script id="ch0104/05">
+  var x = prompt("请输入第一个整数") - 0;
+  var y = prompt("请输入第二个整数") - 0;
+  if (x > y) {
+    console.log(">");
+  } else if (x < y) {
+    console.log("<");
+  } else {
+    console.log("=");
+  }
+</script>
+<script id="ch0104/06">
+  var n = prompt("请输入一个不超过1000的正整数") - 0;
+  if ((n / 10 >= 1) && (n / 10 < 10)) {
+    console.log(1);
+  } else {
+    console.log(0);
+  }
+</script>
+<script id="ch0104/07">
+  var a = prompt("印有幸运的瓶盖数") - 0;
+  var b = prompt("印有鼓励的瓶盖数") - 0;
+  if ((a >= 10) || (b >= 20)) {
+    console.log(1);
+  } else {
+    console.log(0);
+  }
+</script>
+<script id="ch0104/08">
+  var n = prompt("请输入一个整数") - 0;
+  if ((n % 3 == 0) && (n % 5 == 0)) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
+</script>
+<script id="ch0104/09">
+  var n = prompt("请输入一个整数") - 0;
+  if ((n % 3 == 0) && (n % 5 == 0) && (n % 7 == 0)) {
+    console.log("3 5 7");
+  } else if ((n % 3 == 0) && (n % 5 == 0)) {
+    console.log("3 5");
+  } else if ((n % 5 == 0) && (n % 7 == 0)) {
+    console.log("5 7");
+  } else if ((n % 3 == 0) && (n % 7 == 0)) {
+    console.log("3 7");
+  } else if (n % 3 == 0) {
+    console.log(3);
+  } else if (n % 5 == 0) {
+    console.log(5);
+  } else if (n % 7 == 0) {
+    console.log(7);
+  } else {
+    console.log("n");
+  }
+</script>
+<script id="ch0104/10">
+  var a = prompt("语文成绩") - 0;
+  var b = prompt("数学成绩") - 0;
+  if (((a >= 60) && (b < 60)) || ((b >= 60) && (a < 60))) {
+    console.log(1);
+  } else {
+    console.log(0);
+  }
+</script>
+<script id="ch0104/11">
+  var date = prompt("星期几去看展览") - 0;
+  if ((date == 1) || (date == 3) || (date == 5)) {
+    console.log("NO");
+  } else {
+    console.log("YES");
+  }
+</script>
+<script id="ch0104/12">
+  var s = prompt("要行走的距离") - 0;
+  bike = s / 3 + 27 + 23;
+  walk = s / 1.2;
+  if (bike > walk) {
+    console.log("Walk");
+  } else if (walk > bike) {
+    console.log("Bike");
+  } else {
+    console.log("All");
+  }
+</script>
+<script id="ch0104/13">
+  var x = prompt("浮点数") - 0;
+  var y;
+  if ((x >= 0) && (x < 5)) {
+    y = -x + 2.5;
+  } else if ((x >= 5) && (x < 10)) {
+    y = 2 - 1.5 * (x-3) * (x-3);
+  } else if ((x >= 10) && (x < 20)) {
+    y = x / 2 - 1.5;
+  }
+  console.log(y.toFixed(3));
+</script>
+<script id="ch0104/14">
+  var m = prompt("重量（克）") - 0;
+  var urgent = prompt("是否加急（y/n）");
+  var money;
+  if (m <= 1000) {
+    money = 8;
+  } else {
+    var over = (m - 1000) / 500;
+    if (m % 500 != 0) {
+      over = parseInt(over) + 1;
+    }
+    money = 8 + over * 4;
+  }
+  if (urgent == "y") {
+    money += 5;
+  }
+  console.log(money);
+</script>
+<script id="ch0104/15">
+  var a = prompt("第一个整数") - 0;
+  var b = prompt("第二个整数") - 0;
+  var c = prompt("第三个整数") - 0;
+  if ((a >= b) && (a >= c)) {
+    console.log(a);
+  } else if ((b >= a) && (b >= c)) {
+    console.log(b);
+  } else {
+    console.log(c);
+  }
+</script>
+<script id="ch0104/16">
+  var a = prompt("第一个边长") - 0;
+  var b = prompt("第二个边长") - 0;
+  var c = prompt("第三个边长") - 0;
+  if ((a + b > c) && (b + c > a) && (a + c > b)) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
+</script>
+<script id="ch0104/17">
+  var year = prompt("请输入年份") - 0;
+  if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0) && (year % 3200 != 0)) {
+    console.log("Y");
+  } else {
+    console.log("N");
+  }
+</script>
+<script id="ch0104/18">
+  var x = prompt("x坐标") - 0;
+  var y = prompt("y坐标") - 0;
+  if ((x >= -1) && (x <= 1) && (y >= -1) && (y <= 1)) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
+</script>
+<script id="ch0104/19">
+  var a = prompt("整数1") - 0;
+  var b = prompt("整数2") - 0;
+  var c = prompt("运算符（+,-,*,/）");
+  var result = eval(a + c + b);
+  if ((c == "+") || (c == "-") || (c == "*") || (c == "/")) {
+    if ((b == 0) && (c == "/")) {
+      console.log("Divided by zero!");
+    } else {
+      console.log(result);
+    }
+  } else {
+    console.log("Invalid operator!");
+  }
+</script>
+<script id="ch0104/20">
+  var a = prompt("a");
+  var b = prompt("b");
+  var c = prompt("c");
+  var delta = b ** 2 - 4 * a * c;
+  var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+  var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+  if (delta == 0) {
+    console.log("x1=x2=" + x1.toFixed(5));
+  } else if (delta > 0) {
+    console.log("x1=" + x1.toFixed(5) + ";x2=" + x2.toFixed(5));
+  } else {
+    x1 = (-b + Math.sqrt(-delta)) / (2 * a);
+    x2 = (-b - Math.sqrt(-delta)) / (2 * a);
+    console.log("x1=" + (-b / 2 / a).toFixed(5) + "+" + (Math.sqrt(-delta) / 2 / a).toFixed(5) + "i");
+    console.log("x2=" + (-b / 2 / a).toFixed(5) + "-" + (Math.sqrt(-delta) / 2 / a).toFixed(5) + "i");
+  }
+</script>
+<script id="ch0104/21">
+  var n = prompt("苹果个数") - 0;
+  var x = prompt("虫子几小时吃一个苹果") - 0;
+  var y = prompt("过了几小时") - 0;
+  var apple = n - y / x;
+  if(apple % 1 != 0){
+    apple = parseInt(apple) + 1;  
+  }
+  console.log(apple);
+</script>

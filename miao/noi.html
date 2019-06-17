@@ -613,8 +613,35 @@
   console.log(h1.toFixed(7));
 </script>
 <script id="ch0105/21">
+  var n = +prompt("整数");
+  while (n > 1) {
+    if (n % 2 == 0) {
+      console.log(n + "/2=" + n / 2);
+      n = n / 2;
+    } else {
+      console.log(n + "*3+1=" + (n * 3 + 1));
+      n = n * 3 + 1;
+    }
+  }
+  console.log("End");
 </script>
 <script id="ch0105/22">
+  var n = 0;
+  var save = 0;
+  var rest = 0;
+  var cost;
+  for(var i = 1; i <= 12; i++) {
+    cost = +prompt("预算");
+    if(rest + 300 < cost) {
+      console.log("-" + i);
+      break;
+    }
+    save = (Math.floor((300 + rest - cost) / 100) * 100) + save;
+    rest = 300 - (Math.floor((300 + rest - cost) / 100) * 100) + rest - cost;
+  }
+  if (i > 12) {
+    console.log(save * 1.2 + rest);
+  }
 </script>
 <script id="ch0105/23">
 </script>

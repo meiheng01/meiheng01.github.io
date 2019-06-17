@@ -359,3 +359,287 @@
   }
   console.log(apple);
 </script>
+<script id="ch0105/01">
+  var n = +prompt("学生人数");
+  var count = 1;
+  var age = 0;
+  while (count <= n) {
+    age = +prompt("学生的年龄") + age;
+    count++;
+  }
+  console.log((age / n).toFixed(2));
+</script>
+<script id="ch0105/02">
+  var count = 1;
+  var money = 0;
+  while (count <= 12) {
+    money = +prompt("月结余") + money;
+    count++;
+  }
+  console.log("$" + (money / 12).toFixed(2));
+</script>
+<script id="ch0105/03">
+  var n = +prompt("样本容量");
+  var count = 1;
+  var num = 0;
+  while (count <= n) {
+    num = +prompt("浮点数") + num;
+    count++;
+  }
+  console.log((num / n).toFixed(4));
+</script>
+<script id="ch0105/04">
+  var n = +prompt("样本容量");
+  var count = 1;
+  var num = 0;
+  while (count <= n) {
+    num = +prompt("整数") + num;
+    count++;
+  }
+  console.log(num,(num / n).toFixed(5));
+</script>
+<script id="ch0105/05">
+  var n = +prompt("考试人数");
+  var count = 1;
+  var num = 0;
+  var max = 0;
+  while (count <= n) {
+    num = +prompt("成绩");
+    if (max < num) {
+      max = num;
+    }
+    count++;
+  }
+  console.log(max);
+</script>
+<script id="ch0105/06">
+  var n = +prompt("序列个数");
+  var count = 1;
+  var num = 0;
+  var max = 0;
+  var min = 99999999999;
+  while (count <= n) {
+    num = +prompt("整数");
+    if (max < num) {
+      max = num;
+    }
+    if (min > num) {
+      min = num;
+    }
+    count++;
+  }
+  console.log(max - min);
+</script>
+<script id="ch0105/07">
+  var n = +prompt("天数");
+  var count = 1;
+  var au = 0;
+  var ag = 0;
+  var cu = 0;
+  while (count <= n) {
+    au = +prompt("金牌数") + au;
+    ag = +prompt("银牌数") + ag;
+    cu = +prompt("铜牌数") + cu;
+    count++;
+  }
+  console.log(au,ag,cu,au + ag + cu);
+</script>
+<script id="ch0105/08">
+  var n = +prompt("边数");
+  var count = 1;
+  var angle = 0;
+  var sum = (n - 2) * 180;
+  while (count < n) {
+    angle = +prompt("度数") + angle;
+    count++;
+  }
+  console.log(sum - angle);
+</script>
+<script id="ch0105/09">
+  var m = +prompt();
+  var n = +prompt();
+  var sum = 0;
+  if (m % 2 == 0) {
+    m++;
+  }
+  while (m <= n) {
+    sum += m;
+    m += 2;
+  }
+  console.log(sum);
+</script>
+<script id="ch0105/10">
+  var m = +prompt();
+  var n = +prompt();
+  var sum = 0;
+  while (m % 17 != 0) {
+    m++;
+  }
+  while (m <= n) {
+    sum += m;
+    m += 17;
+  }
+  console.log(sum);
+</script>
+<script id="ch0105/11">
+  var k = +prompt("k");
+  var n;
+  var count = 0;
+  var c1 = 0;
+  var c5 = 0;
+  var c10 = 0;
+  while (count < k) {
+    n = +prompt("正整数");
+    if (n == 1) {
+      c1++;
+    }
+    if (n == 5) {
+      c5++;
+    }
+    if (n == 10) {
+      c10++;
+    }
+    count++;
+  }
+  console.log(c1);
+  console.log(c5);
+  console.log(c10);
+</script>
+<script id="ch0105/12">
+  var k = +prompt("N");
+  var m = +prompt("m");
+  var n;
+  var count = 0;
+  var c = 0;
+  while (count < k) {
+    n = +prompt("整数");
+    if (n == m) {
+      c++;
+    }
+    count++;
+  }
+  console.log(c);
+</script>
+<script id="ch0105/13">
+  var a = +prompt("a");
+  var n = +prompt("n");
+  console.log(a ** n);
+</script>
+<script id="ch0105/14">
+  var x = +prompt("x");
+  var n = +prompt("n");
+  console.log((x * (1.001 ** n)).toFixed(4));
+</script>
+<script id="ch0105/15">
+  var r = +prompt("R");
+  var m = +prompt("M");
+  var y = +prompt("Y");
+  console.log(Math.floor(m * ((1 + r / 100) ** y)));
+</script>
+<script id="ch0105/16">
+  var n = +prompt("N");
+  var k = +prompt("k");
+  var m = 1;
+  var money = n;
+  var price = 200;
+  debugger
+  while (money < price) {
+    m += 1;
+    if (m > 20) {
+      break;
+    }
+    money += n;
+    price = price * (1 + k / 100);
+  }
+  if (m <= 20) {
+    console.log(m);
+  } else {
+    console.log("Impossible");
+  }
+</script>
+<script id="ch0105/17">
+  var k = +prompt("k");
+  var a = 1;
+  var b = 1;
+  var c,i;
+  for(i = 1; i < k; i++) {
+    c = a + b;
+    a = b;
+    b = c;
+  }
+  console.log(a);
+</script>
+<script id="ch0105/18">
+  var n = +prompt("n");
+  var a,b,x,y;
+  a = +prompt("总数");
+  b = +prompt("有效");
+  x = b / a * 100;
+  for(var i = 1; i < n; i++) {
+    a = +prompt("总数");
+    b = +prompt("有效");
+    y = b / a * 100;
+    if (x - y > 5) {
+      console.log("worse");
+    } else if (y - x > 5) {
+      console.log("better");
+    } else {
+      console.log("same");
+    }
+  }
+</script>
+<script id="ch0105/19">
+  
+</script>
+<script id="ch0105/20">
+</script>
+<script id="ch0105/21">
+</script>
+<script id="ch0105/22">
+</script>
+<script id="ch0105/23">
+</script>
+<script id="ch0105/24">
+</script>
+<script id="ch0105/25">
+</script>
+<script id="ch0105/26">
+</script>
+<script id="ch0105/27">
+</script>
+<script id="ch0105/28">
+</script>
+<script id="ch0105/29">
+</script>
+<script id="ch0105/30">
+</script>
+<script id="ch0105/31">
+</script>
+<script id="ch0105/32">
+</script>
+<script id="ch0105/33">
+</script>
+<script id="ch0105/34">
+</script>
+<script id="ch0105/35">
+</script>
+<script id="ch0105/36">
+</script>
+<script id="ch0105/37">
+</script>
+<script id="ch0105/38">
+</script>
+<script id="ch0105/39">
+</script>
+<script id="ch0105/40">
+</script>
+<script id="ch0105/41">
+</script>
+<script id="ch0105/42">
+</script>
+<script id="ch0105/43">
+</script>
+<script id="ch0105/44">
+</script>
+<script id="ch0105/45">
+</script>

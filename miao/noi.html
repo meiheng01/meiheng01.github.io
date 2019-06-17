@@ -589,9 +589,19 @@
   }
 </script>
 <script id="ch0105/19">
-  
+  var n = +prompt("屋顶数");
+  var t = 0;
+  for(var i = 0; i < n; i++) {
+    var x = +prompt("x");
+    var y = +prompt("y");
+    var p = +prompt("人数");
+    var d = Math.sqrt(x * x + y * y);
+    t = d * 2 / 50 + 1.5 * p + t;
+  }
+  console.log(Math.ceil(t));
 </script>
 <script id="ch0105/20">
+  
 </script>
 <script id="ch0105/21">
 </script>

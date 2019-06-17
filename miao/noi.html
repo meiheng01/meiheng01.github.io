@@ -601,7 +601,16 @@
   console.log(Math.ceil(t));
 </script>
 <script id="ch0105/20">
-  
+  var h = +prompt("初始高度");
+  var h1 = 0;
+  var s = h;
+  for(var i = 0; i < 10; i++) {
+    s = 2 * h1 + s;
+    h1 = h / 2
+    h /= 2;
+  }
+  console.log(s);
+  console.log(h1);
 </script>
 <script id="ch0105/21">
 </script>

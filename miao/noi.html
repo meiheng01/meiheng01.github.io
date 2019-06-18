@@ -966,6 +966,37 @@
   console.log(count);
 </script>
 <script id="ch0105/42">
+  var h = +prompt("h");
+  var w = +prompt("w");
+  var a = prompt("符号");
+  var solid = +prompt("1/0");
+  var i = 0;
+  var j = 0;
+  var str1 = "";
+  var str2 = "";
+  while(i < w) {
+    str1 = str1 + a;
+    i++;
+  }
+  console.log(str1);
+  if (solid) {
+    str2 = str1;
+  } else {
+    i = 0;
+    while (i < w) {
+      if ((i == 0) || (i == (w - 1))) {
+        str2 = str2 + a;
+      } else {
+        str2 = str2 +" "
+      }
+      i++;
+    }
+  }
+  while (j < (h - 2)) {
+    console.log(str2);
+    j++;
+  }
+  console.log(str1);
 </script>
 <script id="ch0105/43">
 </script>

@@ -686,9 +686,7 @@
       break;
     }
   }
-  console.log(i);
-  console.log(+("" + a + b + c));
-  console.log(+("" + x + y + z));
+  console.log(i,+("" + a + b + c),+("" + x + y + z));
 </script>
 <script id="ch0105/26">
   var a,b,c,d;
@@ -718,7 +716,17 @@
   console.log(i);
 </script>
 <script id="ch0105/28">
-  
+  var x = +prompt();
+  var x0 = x;
+  for(var i = 0; x > 1; i++) {
+    x = x / 10;
+  }
+  var a;
+  for(var j = 0; j < i; j++) {
+    a = x0 % 10;
+    x0 = Math.floor(x0 / 10);
+    console.log(a)
+  }
 </script>
 <script id="ch0105/29">
 </script>

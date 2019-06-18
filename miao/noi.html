@@ -747,7 +747,38 @@
   console.log(s);
 </script>
 <script id="ch0105/30">
-  
+  var a,b,c,d,e,i = 0;
+  var m = +prompt("m");
+  var k = +prompt("k");
+  if (m % 19 == 0) {
+    a = Math.floor(m / 10000);
+    b = Math.floor((m - a * 10000) / 1000);
+    c = Math.floor(m % 1000 / 100);
+    d = Math.floor(m % 100 / 10);
+    e = m % 10;
+    if (a == 3) {
+      i++;
+    }
+    if (b == 3) {
+      i++;
+    }
+    if (c == 3) {
+      i++;
+    }
+    if (d == 3) {
+      i++;
+    }
+    if (e == 3) {
+      i++;
+    }
+    if (i == k) {
+      console.log("YES");
+    }else{
+      console.log("NO");
+    }
+  } else {
+    console.log("NO");
+  }
 </script>
 <script id="ch0105/31">
 </script>

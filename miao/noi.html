@@ -855,6 +855,17 @@
   console.log((s + 1).toFixed(2));
 </script>
 <script id="ch0105/37">
+  var m = +prompt("体力");
+  var n = +prompt("战斗力");
+  var x = +prompt("能量元素");
+  while (x > 0) {
+    x = x - Math.ceil(m / n);
+    if ((x < 0) || (n > m)){
+      break;
+    }
+    n = Math.floor(m / n) + n;
+  }
+  console.log(n);
 </script>
 <script id="ch0105/38">
 </script>

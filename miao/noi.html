@@ -644,6 +644,20 @@
   }
 </script>
 <script id="ch0105/23">
+  var m = +prompt("药品总量");
+  var n = +prompt("人数");
+  var s = 0;
+  var x = 0;
+  var count = 0;
+  for(var i = 0; i < n; i++) {
+    x = +prompt("取药数量");
+    s =  x + s;
+    if (s > m) {
+      count++;
+      s = s - x;
+    }
+  }
+  console.log(count);
 </script>
 <script id="ch0105/24">
 </script>

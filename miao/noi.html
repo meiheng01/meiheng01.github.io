@@ -660,8 +660,21 @@
   console.log(count);
 </script>
 <script id="ch0105/24">
+  var n = +prompt("小时");
+  var count = 0;
+  for(var i = 0; i < n; i++) {
+    var x = +prompt("收缩压");
+    var y = +prompt("舒张压");
+    if ((x >= 90) && (x <= 140) && (y >= 60) && (y <= 90)) {
+      count++;
+    } else {
+      count = 0;
+    }
+  }
+  console.log(count);
 </script>
 <script id="ch0105/25">
+  
 </script>
 <script id="ch0105/26">
 </script>

@@ -902,7 +902,6 @@
   var n = +prompt("n");
   var a,b,c,d,e;
   var count = 0;
-  debugger
   for (var i = 1; i <= n; i++) {
     a = i % 10;
     b = Math.floor(i / 10);
@@ -933,6 +932,38 @@
   console.log(count);
 </script>
 <script id="ch0105/41">
+  var i = +prompt("i");
+  var n = +prompt("n");
+  var a,b,c,d,e;
+  var count = 0;
+  for (; i <= n; i++) {
+    a = i % 10;
+    b = Math.floor(i / 10);
+    c = Math.floor(i / 100);
+    d = Math.floor(i / 1000);
+    e = Math.floor(i / 10000);
+    while (a == 2) {
+      count++;
+      break;
+    }
+    while (b == 2) {
+      count++;
+      break;
+    }
+    while (c == 2) {
+      count++;
+      break;
+    }
+    while (d == 2) {
+      count++;
+      break;
+    }
+    while (e == 2) {
+      count++;
+      break;
+    }
+  }
+  console.log(count);
 </script>
 <script id="ch0105/42">
 </script>

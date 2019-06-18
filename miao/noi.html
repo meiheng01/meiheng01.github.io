@@ -886,7 +886,17 @@
   }
 </script>
 <script id="ch0105/39">
-
+  var n = +prompt("n");
+  var s = 0;
+  var a,b;
+  for (var i = 1; i <= n; i++) {
+    a = i % 10;
+    b = Math.floor(i / 10);
+    if ((i % 7 != 0) && (a != 7) && (b != 7)) {
+      s = s + i * i;
+    }
+  }
+  console.log(s);
 </script>
 <script id="ch0105/40">
 </script>

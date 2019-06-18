@@ -674,7 +674,19 @@
   console.log(count);
 </script>
 <script id="ch0105/25">
-  
+  var a,b,c,x,y,z;
+  for(var i = 81; ; i++) {
+    a = Math.floor(i / 49);
+    b = Math.floor((i - a * 49) / 7);
+    c = i % 7;
+    x = Math.floor(i / 81);
+    y = Math.floor((i - x * 81) / 9);
+    z = i % 9;
+    if (("" + a + b + c) == ("" + z + y + x)) {
+      break;
+    }
+  }
+  console.log(i,+("" + a + b + c),+("" + x + y + z))
 </script>
 <script id="ch0105/26">
 </script>

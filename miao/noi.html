@@ -868,14 +868,21 @@
   console.log(n);
 </script>
 <script id="ch0105/38">
-  var n = +prompt("n");
-  if (n == 0) {
-    console.log("0");
-  }
-  var c;
-  for (var i = n; i > 0; i--) {
-    c = +prompt("c");
-    console.log(c * i);
+  var a = prompt("组数");
+  for (var j = 0; j < a; j++) {
+    var n = +prompt("n");
+    var c;
+    for (var i = n; i >= 0; i--) {
+      c = +prompt("c");
+      if (n == 0) {
+        console.log("0");
+        break;
+      }
+      if (i == 0) {
+        break;
+      }
+      console.log(c * i);
+    }
   }
 </script>
 <script id="ch0105/39">

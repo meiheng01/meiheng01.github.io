@@ -523,7 +523,11 @@
 <script id="ch0105/13">
   var a = +prompt("a");
   var n = +prompt("n");
-  console.log(a ** n);
+  var s = 1;
+  for (var i = 1; i <= n; i++){
+    s = s * a;
+  }
+  console.log(s);
 </script>
 <script id="ch0105/14">
   var x = +prompt("x");
@@ -826,9 +830,29 @@
   console.log(s);
 </script>
 <script id="ch0105/35">
-  
+  var n = +prompt("n");
+  var s = 0, a = 1;
+  for (var i = 1; i <= n; i++) {
+    for (var j = 1; j <= i; j++) {
+      a = a * j; 
+    }
+    s = s + 1 / a;
+    a = 1;
+  }
+  console.log((s + 1).toFixed(10));
 </script>
 <script id="ch0105/36">
+  var x = +prompt("x");
+  var n = +prompt("n");
+  var s = 0, a = 1;
+  for (var i = 1; i <= n; i++) {
+    for (var j = 1; j <= i; j++) {
+      a = a * x;
+    }
+    s = s + a;
+    a = 1;
+  }
+  console.log((s + 1).toFixed(2));
 </script>
 <script id="ch0105/37">
 </script>

@@ -691,6 +691,20 @@
   console.log(+("" + x + y + z));
 </script>
 <script id="ch0105/26">
+  var a,b,c,d;
+  var n = +prompt("n")
+  var count = 0;
+  for(var i = 0; i < n; i++) {
+    var x = +prompt("四位数");
+    a = Math.floor(x / 1000);
+    b = Math.floor((x - a * 1000) / 100);
+    d = x % 10;
+    c = (x % 100 - d) / 10;
+    if (d - a - b - c > 0) {
+      count++;
+    }
+  }
+  console.log(count);
 </script>
 <script id="ch0105/27">
 </script>

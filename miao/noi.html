@@ -1216,8 +1216,17 @@
   }
 </script>
 <script id="primes">
-
-</script>
+  for (var n = 1; n <= 100; n++) {
+    var count = 0;
+    for (var i = 1; i <= n; i++) {
+      if (n % i == 0) {
+        count++;
+      }
+    }
+    if (count == 2) {
+      console.log(n);
+    }
+  }
 <script id="itob">
 
 </script>

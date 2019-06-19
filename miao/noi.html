@@ -1130,7 +1130,43 @@
   }
 </script>
 <script id="weekday">
-
+  var year = +prompt();
+  var month = +prompt();
+  var y = 1900;
+  var m = 1;
+  var w = 1;
+  var m31 = 3;
+  var m30 = 3;
+  var feb = 0;
+  var weekday = 1;
+  var y1 = year - y;
+  var m1 = month - m;
+  for (var i = 0; i < y1; i++) {
+    if (((i + y) % 4 == 0) && ((i + y) % 100 != 0) || ((i + y) % 400 == 0) && ((i + y) % 3200 != 0)) {
+      w += 2;
+    } else {
+      w++;
+    }
+    if (w > 6) {
+      w -= 7;
+    }
+  }
+  for (var j = 0; j < m1; j++) {
+    if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0) && (year % 3200 != 0)) {
+      feb = 1;
+    }
+    if (j == 3 || j == 5 || j == 8 || j == 10) {
+      w += 2;
+    } else if (j == 1) {
+      w += feb;
+    } else {
+      w += 3;
+    }
+    if (w > 6) {
+      w -= 7;
+    }
+  }
+  console.log(w);
 </script>
 <script id="complete-number">
 

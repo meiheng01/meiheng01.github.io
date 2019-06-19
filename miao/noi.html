@@ -1010,9 +1010,8 @@
 <script id="ch0105/44">
   var n = +prompt("n");
   var count = 0;
-  var count1 = 0;
   for (var i = 1; ; i++) {
-    count1 = 0;
+    var count1 = 0;
     for (var j = 1; j <= i; j++) {
       if (i % j == 0) {
         count1 += 1;
@@ -1042,3 +1041,59 @@
   }
   console.log(s);
 </script>
+<script id="7">
+  var n = +prompt();
+  if (n % 7 != 0) {
+    while (n > 0) {
+      var digit = n % 10;
+      n = (n - digit) / 10;
+      if (digit == 7) {
+        console.log("YES");
+        break;
+      }
+    }
+    if (n == 0) {
+      console.log("NO");
+    }
+  } else {
+    console.log("YES");
+  }
+</script>
+<script id="sort">
+
+</script>
+<script id="narcissistic">
+
+</script>
+<script id="narcissistics">
+
+</script>
+<script id="palindrom">
+
+</script>
+<script id="weekday">
+
+</script>
+<script id="complete-number">
+
+</script>
+<script id="complete-numbers">
+
+</script>
+<script id="prime">
+
+</script>
+<script id="primes">
+
+</script>
+<script id="itob">
+
+</script>
+<script id="lcf&lcm">
+
+</script>
+<script id="sqrt">
+
+</script>
+<script id=""></script>
+<script id=""></script>

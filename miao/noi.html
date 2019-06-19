@@ -1169,13 +1169,43 @@
   console.log(w);
 </script>
 <script id="complete-number">
-
+    var n = +prompt();
+    var i = 1;
+    var s = 0;
+    while (i < n) {
+      if (n % i == 0){
+        s = s + i;
+      }
+      i++;
+    }
+    if (s == n) {
+      console.log("YES");
+    } else {
+      console.log("NO");
+    }
 </script>
 <script id="complete-numbers">
-
+    var n = 1;
+    while (n <= 1000) {
+      var s = 0;
+      var i = 1;
+      while (i < n) {
+        if (n % i == 0){
+          s = s + i;
+        }
+        i++;
+      }
+      if (s == n) {
+        console.log(n);
+      }
+      n++;
+    }
 </script>
 <script id="prime">
-
+  var n = +prompt();
+  for (var i = 0; i < n; i++) {
+    
+  }
 </script>
 <script id="primes">
 

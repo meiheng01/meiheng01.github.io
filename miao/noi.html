@@ -1106,8 +1106,28 @@
     }
   } 
 </script>
-<script id="palindrom"></script>
-
+<script id="palindrom">
+  var n = +prompt();
+  var a = n;
+  var b = n;
+  var m = 1;
+  while (n / 10 > 1) {
+    m++;
+    n /= 10;
+  }
+  var i = 0;
+  var str = "";
+  while (i < m) {
+    var digit = a % 10;
+    a = (a - digit) / 10;
+    str = str + digit;
+    i++;
+  }
+  if (str == b) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
 </script>
 <script id="weekday">
 

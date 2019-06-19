@@ -1086,12 +1086,27 @@
   }
 </script>
 <script id="narcissistic">
-
+  var n = +prompt();
+  var a = n % 10;
+  var b = ((n - a) / 10) % 10;
+  var c = Math.floor(n / 100);
+  if (n == a * a * a + b * b * b + c * c * c) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
 </script>
 <script id="narcissistics">
-
+  for (var i = 100; i < 1000; i++) {
+    var a = i % 10;
+    var b = ((i - a) / 10) % 10;
+    var c = Math.floor(i / 100);
+    if (i == a * a * a + b * b * b + c * c * c) {
+      console.log(i);
+    }
+  } 
 </script>
-<script id="palindrom">
+<script id="palindrom"></script>
 
 </script>
 <script id="weekday">

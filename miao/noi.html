@@ -1235,7 +1235,22 @@
 <script id="lcf&lcm">
   var a = +prompt();
   var b = +prompt();
-  
+  if (a > b) {
+    a = a + b;
+    b = a - b;
+  }
+  for (var i = a; i >= 1; i--) {
+    if (a % i == 0 && b % i == 0) {
+      console.log(i);
+      break;
+    }
+  }
+  for (var i = b; ; i++) {
+    if (i % a == 0 && i % b == 0) {
+      console.log(i);
+      break;
+    }
+  }
 </script>
 <script id="sqrt">
   var n = +prompt();

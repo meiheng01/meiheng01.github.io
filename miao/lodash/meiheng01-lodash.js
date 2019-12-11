@@ -26,6 +26,10 @@ var meiheng01 = function() {
     return result;
   }
 
+  function join(array, separator = ','){
+    return array.reduce((result, curr) => result + '' + separator + curr)
+  }
+
   return {
     compact,
     flatten,

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+            height:50%;
+            width:50%;
+            position: relative;
+        }
+        span {
+            font-size:20px;
+            position: absolute;
+            background-color: #fff;
+            border: 2px solid green;
+            padding : 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <span>不能显示</span>
+    <img src="http://i0.hdslb.com/bfs/article/b81679f722a176a8be6dfb47fdea8d15d0cdd4e2.jpg" alt="">
+    <script>
+        let img = document.querySelector('img');
+        let span = document.querySelector('span');
+        span.tabIndex = -1;
+        
+        img.addEventListener('contextmenu',e=>{
+            span.style.display='block'
+            span.focus();
+            span.style.zIndex = 100;
+            span.style.top = e.pageY + 'px';
+            span.style.left = e.pageX + 'px';
+            e.preventDefault();
+        })
+        span.addEventListener('blur',e=>{
+            span.style.display = 'none'
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width:100px;
+            height:100px;
+            position:absolute;
+            left:0px;
+            top:0px;
+        }
+        .a {
+            background-color:red;
+        }
+        .b {
+            background-color:green;
+        }
+        .c {
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div style = 'top:0;left:0' class="a draggable"></div>
+    <div style = 'top:0;left:0' class="b draggable"></div>
+    <div style = 'top:0;left:0' class="c draggable"></div>
+    <script>
+        let zIdx = 5;
+        window.addEventListener('mousedown',e =>{
+            if (e.target.matches('.draggable')) {
+                zIdx++;
+                let moving = e.target;
+                moving.style.zIndex = zIdx;
+                let startX = e.pageX;
+                let startY = e.pageY;
+                let elInitX = parseInt(moving.style.left);
+                let elInitY = parseInt(moving.style.top);
+
+                let move;
+                window.addEventListener('mousemove', move = function move(e){
+                    if (e.buttons == 0) {
+                        window.removeEventListener('mousemove',move)
+                    }
+
+                    let changeX = e.pageX - startX;
+                    let changeY = e.pageY - startY;
+
+                    let top = elInitY + changeY;
+                    let left = elInitX + changeX;
+                    if (top < 25s) {
+                        top = 0;
+                    }
+                    if (left < 25) {
+                        left = 0;
+                    }
+                    if (top > innerHeight - 125) {
+                        top = innerHeight - 100;
+                    }
+                    if (left > innerWidth - 125) {
+                        left = innerWidth - 100;
+                    }
+                    moving.style.top = top + 'px';
+                    moving.style.left = left + 'px';
+                    
+                })
+                window.addEventListener('mouseup',()=>{
+                    window.removeEventListener('mousemove',move);
+                })
+            }
+        })
+    </script>
+</body>
+</html>

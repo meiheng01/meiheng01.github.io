@@ -40,7 +40,7 @@ var meiheng01 = function() {
 
   function indexOf(array, value, fromIndex=0){
     while (fromIndex < array.length) {
-      if(isNaN(value)&&isNaN(array[fromIndex])){
+      if((isNaN(value))&&(isNaN(array[fromIndex]))){
         return fromIndex;
       }
       if(array[fromIndex] == value) {

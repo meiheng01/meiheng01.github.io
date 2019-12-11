@@ -38,13 +38,26 @@ var meiheng01 = function() {
     return arr;
   }
 
+  function indexOf(array, value, [fromIndex=0]){
+    while (fromIndex < array.length) {
+      if(isNaN(value)&&isNaN(array[fromIndex])){
+        return fromIndex;
+      }
+      if(array[fromIndex] == value) {
+        return fromIndex;
+      }
+      fromIndex++;
+    }
+    return -1;
+  }
+
   return {
     compact,
     flatten,
     chunk,
     join,
     drop,
-    
+
   }
 
 } ()

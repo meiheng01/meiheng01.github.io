@@ -4,8 +4,18 @@ var meiheng01 = function() {
     return ary.filter(it => it);
   }
 
-  function flatten() {
-
+  function flatten(ary) {
+    var result = [];
+    for (var i = 0; i < ary.length; i++) {
+      if (!ary[i].length) {
+        result.push(ary[i])
+      } else {
+        for (var j = 0; j < ary[i].length; j++) {
+          result.push(ary[i][j])
+        }
+      }
+    }
+    return result;
   }
 
   function chunk(ary, size) {

@@ -38,7 +38,7 @@ var meiheng01 = function() {
     return arr;
   }
 
-  function indexOf(array, value, [fromIndex=0]){
+  function indexOf(array, value, fromIndex=0){
     while (fromIndex < array.length) {
       if(isNaN(value)&&isNaN(array[fromIndex])){
         return fromIndex;
@@ -58,7 +58,7 @@ var meiheng01 = function() {
     join,
     drop,
     indexOf,
-    
+
   }
 
 } ()

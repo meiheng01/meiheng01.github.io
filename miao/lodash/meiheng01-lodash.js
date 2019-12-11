@@ -30,11 +30,21 @@ var meiheng01 = function() {
     return array.reduce((result, curr) => result + '' + separator + curr)
   }
 
+  function drop(array, n = 1) {
+    var arr = array;
+    for (var i = 0; i < n; i++) {
+      arr.shift()
+    }
+    return arr;
+  }
+
   return {
     compact,
     flatten,
     chunk,
     join,
+    drop,
+    
   }
 
 } ()

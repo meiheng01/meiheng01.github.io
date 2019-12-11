@@ -9,13 +9,13 @@ var meiheng01 = function() {
   }
 
   function chunk() {
-    
+
   }
 
   return {
     compact,
     flatten,
-
+    chunk,
   }
 
 } ()

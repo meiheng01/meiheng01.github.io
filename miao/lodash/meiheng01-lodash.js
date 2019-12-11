@@ -11,7 +11,7 @@ var meiheng01 = function() {
   function chunk(ary, size) {
     var result = [];
     while(ary.length) {
-      result.push(ary.slice(0,size))
+      result.push(ary.splice(0,size))
     }
     return result;
   }

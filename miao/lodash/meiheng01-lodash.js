@@ -57,7 +57,8 @@ var meiheng01 = function() {
     chunk,
     join,
     drop,
-
+    indexOf,
+    
   }
 
 } ()

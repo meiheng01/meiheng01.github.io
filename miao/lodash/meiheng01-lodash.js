@@ -34,6 +34,7 @@ var meiheng01 = function() {
     compact,
     flatten,
     chunk,
+    join,
   }
 
 } ()

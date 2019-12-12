@@ -52,9 +52,9 @@ var meiheng01 = function() {
   }
 
   function difference(array, ...values) {
-    var vals = [...values]
+    var vals = [...values].flatten()
     var arr = array;
-    for (var i = 0; i < vals.flatten.length; i++) {
+    for (var i = 0; i < vals.length; i++) {
       arr = arr.filter(it => it != vals[i])
     }
     return arr;
@@ -72,6 +72,10 @@ var meiheng01 = function() {
     return value;
   }
 
+  function dropWhile(array, predicate=identity) {
+    
+  }
+
   return {
     compact,
     flatten,
@@ -82,7 +86,8 @@ var meiheng01 = function() {
     difference,
     dropRight,
     identity,
-    
+    dropWhile,
+
   }
 
 } ()

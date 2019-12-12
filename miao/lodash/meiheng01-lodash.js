@@ -51,10 +51,11 @@ var meiheng01 = function() {
     return -1;
   }
 
-  function difference(array, values) {
+  function difference(array, ...values) {
+    var vals = [...values]
     var arr = array;
-    for (var i = 0; i < values.length; i++) {
-      arr = arr.filter(it => it != values[i])
+    for (var i = 0; i < vals.flatten.length; i++) {
+      arr = arr.filter(it => it != vals[i])
     }
     return arr;
   }

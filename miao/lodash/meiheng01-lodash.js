@@ -51,6 +51,14 @@ var meiheng01 = function() {
     return -1;
   }
 
+  function difference(array, values) {
+    var arr = array;
+    for (var i = 0; i < values.length; i++) {
+      arr = arr.filter(it => it != values[i])
+    }
+    return arr;
+  }
+
   return {
     compact,
     flatten,
@@ -58,7 +66,8 @@ var meiheng01 = function() {
     join,
     drop,
     indexOf,
-
+    difference,
+    
   }
 
 } ()

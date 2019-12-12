@@ -68,6 +68,10 @@ var meiheng01 = function() {
     return arr;
   }
 
+  function identity(value) {
+    return value;
+  }
+
   return {
     compact,
     flatten,
@@ -77,7 +81,8 @@ var meiheng01 = function() {
     indexOf,
     difference,
     dropRight,
-
+    identity,
+    
   }
 
 } ()
